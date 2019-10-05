@@ -22,6 +22,26 @@
   <link href="css/resume.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style type="text/css">
+    #langBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      outline: none;
+      background-image: url('img/en-flag.png');
+      color: white;
+      cursor: pointer;
+      padding: 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 20px;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 
 <body id="page-top">
@@ -220,7 +240,7 @@
     </section>
 
     <hr class="m-0">
-
+    <div id="langBtn" title="Go to top" style="display: block;"></div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -232,7 +252,24 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
-
+  <script type="text/javascript">
+    var lang = "en";
+    $(document).ready(function(){
+      $("#langBtn").click(function(){
+        if(lang == "en"){
+          lang = "id";
+        }else{
+          lang = "en";
+        }
+        $(this)
+          .animate({opacity: 0}, 10, function() {
+            $(this)
+              .css({'background-image': 'url(img/'+lang+'-flag.png)'})
+              .animate({opacity: 1});
+          });
+      });
+    });
+  </script>
 </body>
 
 </html>
