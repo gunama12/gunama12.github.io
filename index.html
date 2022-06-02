@@ -104,6 +104,98 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="portfolio">
       <div class="w-100">
         <h2 class="mb-5" id="portfolioText">Portfolio</h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_modik.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">MODIK</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_tanamas.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">TANAMAS</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_loqato.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">WEB LOQATO</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_sipbos.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">SIPBOS</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_sipblud.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">SIPBLUD</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_epemeriksa.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">EPEMERIKSA</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_coin.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">COINMARKETNEWS</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_mcst.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">MCST</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2 porto-card-container">
+              <a href="#" data-toggle="modal" data-target="#portoModal">
+                <div class="card">
+                  <img class="card-img-top" src="img/porto_natcoin.png" alt="">
+                  <div class="card-body">
+                    <b class="porto-title">NATCOIN ADMIN</b>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -265,6 +357,35 @@
     <div id="langBtn" title="Go to top" style="display: block;"></div>
   </div>
 
+  <div class="modal fade" id="portoModal" tabindex="-1" aria-labelledby="portoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="portoModalLabel">PORTFOLIO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-9">
+                <img id="imgPortoModal" src="" alt="" width="100%">
+              </div>
+              <div class="col-lg-3">
+                <b id="titlePortoModal"></b>
+                <p id="descPortoModal"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -367,6 +488,42 @@
         $("#"+item["id"]).text(item["value"]);
       })
     }
+
+
+    $(".porto-card-container a").click(function(event){ 
+      // var products = $(this).parent().parent().children();
+      // var productIndex = $(this).parent().index();
+
+      var portoTitle = $(this).find('.porto-title').text();
+      console.log(portoTitle);
+      // var productPrice = $(this).find('.storefront-item-price').text();
+      // var productLoved = $(this).find('.storefront-love span').text();      
+      // var productDesc = $(this).find('.storefront-item-desc').text();     
+
+      // products.each(function(index, element){
+      //   let productTitle = $(this).find('.storefront-item-title').text();
+      //   let productPrice = $(this).find('.storefront-item-price').text();
+      //   let productLoved = $(this).find('.storefront-love span').text();      
+      //   let productDesc = $(this).find('.storefront-item-desc').text();     
+
+      //   let img = $(this).children().children().children().attr("src");
+      //   let class_item = "item";
+      //   if($(this).index() === productIndex){
+      //     class_item = "item active-item-product-gallery";
+      //   }
+      //   $('#carousel-product-gallery').trigger('add.owl.carousel', ["<div class='"+class_item+"'><img src='"+img+"'><div class='modal-prod-info-carousel'><p>"+productTitle+"</p><p>"+productPrice+"</p><p>"+productLoved+"</p><p>"+productDesc+"</p></div></div>"]);     
+      // });
+
+      var image = $(this).children().children().attr("src");
+      $("#imgPortoModal").attr('src', image);
+
+      $("#titlePortoModal").html(portoTitle);
+      // $(".modal-product-info .modal-product-desc").html(productDesc);   
+      // $(".modal-product .modal-product-price").html(productPrice);  
+      // $(".modal-product .modal-product-love span").html(productLoved);  
+
+      // $("#carousel-product-gallery").trigger('to.owl.carousel',[productIndex,10]);
+    });
   </script>
 </body>
 
